@@ -1,0 +1,28 @@
+name: toot
+version: '0.19.0' # just for humans, typically '1.2+git' or '1.3.2'
+summary: toot - a Mastodon CLI client
+description: |
+  This is my-snap's description. You have a paragraph or two to tell the
+  most important story about your snap. Keep it under 100 words though,
+  we live in tweetspace and your description wants to look good in the snap
+  store.
+
+grade: stable
+confinement: strict
+
+apps:
+  toot:
+    command: toot
+    environment:
+      LC_ALL: C.UTF-8
+      LANG: C.UTF-8
+    plugs:
+      - network
+
+parts:
+  toot:
+    plugin: python
+    source: https://github.com/ihabunek/toot.git
+    source-tag: '0.19.0'
+#    stage-packages:
+#      - locales
