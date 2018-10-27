@@ -18,6 +18,8 @@ apps:
       LANG: C.UTF-8
     plugs:
       - network
+      - home
+      - removable-media
 
 parts:
   toot:
