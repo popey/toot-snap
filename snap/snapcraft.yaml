@@ -25,7 +25,7 @@ parts:
   toot:
     plugin: python
     source: https://github.com/ihabunek/toot.git
-    override-pull:|
+    override-pull: |
       snapcraftctl pull
       last_committed_tag="$(git describe --tags --abbrev=0)"
       last_released_tag="$(snap info toot | awk '$1 == "beta:" { print $2 }')"
