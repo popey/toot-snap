@@ -6,16 +6,14 @@ description: |
   we live in tweetspace and your description wants to look good in the snap
   store.
 adopt-info: toot
+base: core18
 
 grade: stable
 confinement: strict
 
 apps:
   toot:
-    command: toot
-    environment:
-      LC_ALL: C.UTF-8
-      LANG: C.UTF-8
+    command: locales-launch $SNAP/bin/toot
     plugs:
       - network
       - home
@@ -23,6 +21,15 @@ apps:
       - desktop
 
 parts:
+  locales-launch:
+    organize:
+      locales-launch: bin/
+    plugin: dump
+    source: https://github.com/Lin-Buo-Ren/locales-launch-part.git
+    source-subdir: launchers
+    stage-packages:
+    - libc-bin
+    - locales
   toot:
     plugin: python
     source: https://github.com/ihabunek/toot.git
