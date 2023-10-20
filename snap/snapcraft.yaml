@@ -6,14 +6,14 @@ description: |
   we live in tweetspace and your description wants to look good in the snap
   store.
 adopt-info: toot
-base: core18
+base: core20
 
 grade: stable
 confinement: strict
 
 apps:
   toot:
-    command: locales-launch $SNAP/bin/toot
+    command: bin/locales-launch $SNAP/bin/toot
     plugs:
       - network
       - home
