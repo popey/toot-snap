@@ -6,7 +6,7 @@ description: |
   we live in tweetspace and your description wants to look good in the snap
   store.
 version: 0.50.1
-base: core20
+base: core22
 
 grade: stable
 confinement: strict
