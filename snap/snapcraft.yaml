@@ -5,7 +5,7 @@ description: |
   most important story about your snap. Keep it under 100 words though,
   we live in tweetspace and your description wants to look good in the snap
   store.
-version: 0.50.1
+version: 0.51.0
 base: core22
 
 grade: stable
