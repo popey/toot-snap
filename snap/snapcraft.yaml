@@ -33,3 +33,4 @@ parts:
   toot:
     plugin: python
     source: https://github.com/ihabunek/toot.git
+    source-tag: "0.52.1"
